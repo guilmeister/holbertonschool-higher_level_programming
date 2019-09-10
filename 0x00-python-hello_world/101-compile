@@ -1,2 +1,2 @@
 #!/bin/bash
-python -m py_compile $PYFILEc
+python -m compileall -i $PYFILE
