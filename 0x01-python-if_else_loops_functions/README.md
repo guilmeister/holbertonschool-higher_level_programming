@@ -1,1 +1,1 @@
-This directory is for practicing if else loops on Python
+This directory is for practicing if else loops on Python and C practice
