@@ -2,9 +2,9 @@
 
 
 def magic_calculation(a, b, c):
-    if a < b == False:
+    if a < b:
         return c
-    if c > b == False:
+    if c > b:
         return a + b
 
     return a * b - c
