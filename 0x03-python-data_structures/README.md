@@ -1,0 +1,1 @@
+This directory is for practicing lists in Python
