@@ -2,9 +2,10 @@
 def multiple_returns(sentence):
     if sentence is None:
         return (0, None)
-    length = len(sentence)
-    first = ''
-    for char in sentence:
-        first = char
-        break
-    return (length, first)
+    else:
+        length = len(sentence)
+        first = ''
+        for char in sentence:
+            first = char
+            break
+        return (length, first)
