@@ -4,22 +4,11 @@ def roman_to_int(roman_string):
         return 0
     if not isinstance(roman_string, str):
         return 0
-    dic = {'I': 1,
-           'V': 5,
-           'X': 10,
-           'L': 50,
-           'C': 100,
-           'D': 500,
-           'M': 1000}
+    roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
+             'C': 100, 'D': 500, 'M': 1000}
     total = 0
-    for x in range(len(roman_string)):
-        s1 = dic[roman_string[x]]
-        if (x + 1 < len(roman_string)):
-            s2 = dic[roman_string[x + 1]]
-            if (s1 >= s2):
-                total = total + s1
-            else:
-                total = total + (s2 - s1)
-        else:
-            total = total + s1
+    cmp_last = 0
+    for x in roman_string[::-1]:
+        total = total - roman[x] if roman[x] < cmp_last else total + roman[x]
+        cmp_last = roman[x]
     return total
