@@ -1,15 +1,9 @@
 #!/usr/bin/python3
 def safe_print_integer_err(value):
     import sys
-    flag = 0
     try:
-        if(isinstance(value, int)):
-            flag = 1
-    except Exception as e:
-        print(e)
-    finally:
-        if flag == 1:
-            print("{:d}".format(value))
-            return True
-        else:
-            return False
+        print("{:d}".format(value))
+        return True
+    except Exception as error:
+        print("Exception: {}\n".format(error), file=sys.stderr, end="")
+        return False
