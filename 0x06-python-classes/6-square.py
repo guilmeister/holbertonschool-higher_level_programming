@@ -3,8 +3,8 @@ class Square:
     """Class Square"""
     def __init__(self, size=0, position=(0, 0)):
         """Initializer"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -28,8 +28,9 @@ class Square:
     @position.setter
     def position(self, value):
         """Getter for position"""
-        if self.__position[0] < 0 or self.__position[1] < 0\
-                or type(self.__position) is tuple:
+        if isinstance(value, tuple) is False:
+            raise TypeError("position must be a tuple of 2 positive integer")
+        if value[0] < 0 and value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integer")
         self.__position = value
 
