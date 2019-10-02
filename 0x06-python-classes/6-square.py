@@ -42,7 +42,7 @@ class Square:
 
     def my_print(self):
         """Printing box"""
-        if self.__size == 0:
+        if self.size == 0:
             print("")
             return
         for x in range(0, self.__position[1]):
@@ -56,4 +56,4 @@ class Square:
 
     def area(self):
         """Returning size"""
-        return self.__size
+        return self.__size**2
