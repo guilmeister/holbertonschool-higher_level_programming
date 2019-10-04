@@ -4,3 +4,13 @@
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
+
+>>> text_indentation("Gucci gang, what what? Boy come here")
+Gucci gang, what what?
+<BLANKLINE>
+Boy come here
+
+>>> text_indentation("123, 456? Three little hands are good to see")
+123, 456?
+<BLANKLINE>
+Three little hands are good to see
