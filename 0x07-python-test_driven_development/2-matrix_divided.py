@@ -2,8 +2,9 @@
 def matrix_divided(matrix, div):
     for outer in range(0, len(matrix)):
         for inner in range(0, len(matrix[outer])):
-            if inner > len(matrix[outer]):
-                raise TypeError("Each row of the matrix must have the same size")
+            if inner > len(matrix):
+                raise TypeError("Each row of the matrix must have the same\
+ size")
             if isinstance(matrix[outer][inner], (int, float)) is False:
                 raise TypeError("matrix must be a matrix (list of lists)\
  of integers/floats")
