@@ -1,5 +1,18 @@
 #!/usr/bin/python3
+"""Module to find the matrix divided by div
+
+
+
+"""
+
+
 def matrix_divided(matrix, div):
+    """Function to find the matrix divided by div
+
+    """
+    if matrix is None:
+        raise TypeError("matrix must be a matrix (list of lists)\
+ of integers/floats")
     for outer in range(0, len(matrix)):
         for inner in range(0, len(matrix[outer])):
             if inner > len(matrix):
