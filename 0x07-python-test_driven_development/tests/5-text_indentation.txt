@@ -14,3 +14,8 @@ Boy come here
 123, 456?
 <BLANKLINE>
 Three little hands are good to see
+
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
