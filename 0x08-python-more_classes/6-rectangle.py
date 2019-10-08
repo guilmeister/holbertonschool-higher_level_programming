@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 class Rectangle:
+    """
+    Class Rectangle that defines a rectangle:
 
+    Args:
+        width(int): width dimension of a rectangle
+        height(int): height dimension of a rectangle
+        number_of_instances(int): number of existing rectangles
+    """
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -9,15 +16,18 @@ class Rectangle:
         Rectangle.number_of_instances = Rectangle.number_of_instances + 1
 
     def __del__(self):
+        """Deletes an item"""
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
 
     @property
     def width(self):
+        """Returns width value"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Sets width value if value is valid"""
         if isinstance(value, int) is False:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,10 +36,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """Returns height value"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Sets height value if value is valid"""
         if isinstance(value, int) is False:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -37,9 +49,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """Returns the area value of the dimensions of the rectangle"""
         return self.__height * self.__width
 
     def perimeter(self):
+        """Returns the perimeter value of the dimensions of the rectangle"""
         if self.__height == 0 or self.__width == 0:
             return 0
         else:

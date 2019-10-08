@@ -1,5 +1,14 @@
 #!/usr/bin/python3
 class Rectangle:
+    """
+    Class Rectangle that defines a rectangle:
+
+    Args:
+        width(int): width dimension of a rectangle
+        height(int): height dimension of a rectangle
+        number_of_instances(int): number of existing rectangles
+        print_symbols(any): symbol to be printed
+    """
 
     number_of_instances = 0
     print_symbol = "#"
@@ -10,15 +19,26 @@ class Rectangle:
         Rectangle.number_of_instances = Rectangle.number_of_instances + 1
 
     def __del__(self):
+        """Delete an item"""
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
 
     def __str__(self):
-        rectangle_print = ((Rectangle.print_symbol * self.__width + '\n') * self.__height)
+        """String representation of object"""
+        rectangle_print = ((Rectangle.print_symbol * self.__width + '\n') *
+                           self.__height)
         return rectangle_print[:(self.__height * self.__width) +
                                 (self.__height - 1)]
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """
+        Compares two rectangles and returns the bigger rectangle via area
+
+        Args:
+            rect_1: first rectangle with dimensions given
+            rect_2: second rectangle with dimensions given
+        """
         if isinstance(rect_1, Rectangle) is False:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if isinstance(rect_2, Rectangle) is False:
@@ -32,10 +52,12 @@ class Rectangle:
 
     @property
     def width(self):
+        """Returns width value"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Sets the width value if value is valid"""
         if isinstance(value, int) is False:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -44,10 +66,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """Returns height value"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Sets the height value if value is valid"""
         if isinstance(value, int) is False:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -55,9 +79,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """Returns the area value of the dimensions of the rectangle"""
         return self.__height * self.__width
 
     def perimeter(self):
+        """Returns the perimeter value of the dimensions of the rectangle"""
         if self.__height == 0 or self.__width == 0:
             return 0
         else:
