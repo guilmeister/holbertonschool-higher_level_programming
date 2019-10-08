@@ -1,0 +1,1 @@
+This directory is for understanding that everything is an object
