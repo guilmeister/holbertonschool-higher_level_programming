@@ -15,10 +15,20 @@ class Rectangle:
         self.__height = height
         Rectangle.number_of_instances = Rectangle.number_of_instances + 1
 
+    def __repr__(self):
+        """Printable representational string of the given object"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
     def __del__(self):
         """Deletes an item"""
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
+
+    def __str__(self):
+        """String representation of object"""
+        rectangle_print = (('#' * self.__width + '\n') * self.__height)
+        return rectangle_print[:(self.__height * self.__width) +
+                                (self.__height - 1)]
 
     @property
     def width(self):
