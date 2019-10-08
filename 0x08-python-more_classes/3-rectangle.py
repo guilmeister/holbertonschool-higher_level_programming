@@ -14,8 +14,7 @@ class Rectangle:
     def __str__(self):
         """String representation of object"""
         rectangle_print = (('#' * self.__width + '\n') * self.__height)
-        return rectangle_print[:(self.__height * self.__width) +
-                                (self.__height - 1)]
+        return rectangle_print[:-1]
 
     @property
     def width(self):
@@ -52,6 +51,6 @@ class Rectangle:
     def perimeter(self):
         """Returns the perimeter value of the dimensions of the rectangle"""
         if self.__height == 0 or self.__width == 0:
-            return 0
+            return 0, ''
         else:
             return ((self.__height * 2) + (self.__width * 2))
