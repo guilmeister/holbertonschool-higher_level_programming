@@ -32,17 +32,12 @@ Traceback (most recent call last):
     ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
->>> add_integer(1, )
+>>> add_integer(float('nan'), 0)
 Traceback (most recent call last):
     ...
-TypeError: add_integer() missing 1 required positional argument: 'b'
+ValueError: cannot convert float NaN to integer
 
->>> add_integers('NaN', 0)
+>>> add_integer(1.8976931348623157e+308, 0)
 Traceback (most recent call last):
     ...
-ValueError: invalid literal for int() with base 10: 'NaN'
-
->>> add_integers(1.8976931348623157e+308, 0)
-Traceback (most recent call last):
-    ...
-TypeError: cannot convert float infinity to integer
+OverflowError: cannot convert float infinity to integer
