@@ -36,8 +36,8 @@ class Rectangle(BaseGeometry):
         """
         String representation of an object
         """
-        rectangle_print = "[Rectangle] {}/{}".format(self.__width, self.__height)
-        return rectangle_print
+        rect_print = "[Rectangle] {}/{}".format(self.__width, self.__height)
+        return rect_print
 
     def area(self):
         """
