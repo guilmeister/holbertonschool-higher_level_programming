@@ -39,14 +39,15 @@ class Rectangle(BaseGeometry):
         """
         String representation of an object
         """
-        rectangle_print = "[Rectangle] {}/{}".format(self.__width, self.__height)
-        return rectangle_print
+        rect_print = "[Rectangle] {}/{}".format(self.__width, self.__height)
+        return rect_print
 
     def area(self):
         """
         Returns value of area
         """
         return self.__width * self.__height
+
 
 class Square(Rectangle):
     """
@@ -57,8 +58,9 @@ class Square(Rectangle):
         """
         Validate inputs before initializing values
         """
-        BaseGeometry.integer_validator(self, "square", size)
+        BaseGeometry.integer_validator(self, "size", size)
         self.__size = size
+        super().__init__("size", size)
 
     def __str__(self):
         """
