@@ -1,0 +1,1 @@
+This directory is for practicing file input output in Python
