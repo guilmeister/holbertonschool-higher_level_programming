@@ -7,7 +7,7 @@ class Student:
 
     def to_json(self, attrs=None):
         filtered = {}
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         for key in attrs:
             if key in self.__dict__.keys():
