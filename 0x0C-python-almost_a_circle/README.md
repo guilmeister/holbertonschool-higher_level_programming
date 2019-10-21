@@ -1,0 +1,1 @@
+This directory is for practicing all lessons learned from python
