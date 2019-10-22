@@ -1,9 +1,16 @@
 #!/usr/bin/python3
 from models.rectangle import Rectangle
+"""Square Module"""
+
 
 class Square(Rectangle):
-
+    """
+    Class Square
+    """
     def __init__(self, size, x=0, y=0, id=None):
+        """
+        Function that initializes
+        """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size <= 0:
@@ -20,6 +27,9 @@ class Square(Rectangle):
         self.__size = size
 
     def __str__(self):
+        """
+        Function that returns string
+        """
         sqr_prt = "[Square] ({}) {}/{} - {}".format(self.id,
                                                     self.x,
                                                     self.y,
@@ -27,10 +37,16 @@ class Square(Rectangle):
         return sqr_prt
 
     def to_dictionary(self):
+        """
+        Function that returns dictionary
+        """
         sqr_dict = {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
         return sqr_dict
 
     def update(self, *args, **kwargs):
+        """
+        Function that updates
+        """
         update_list = []
         limit = len(args)
         if args is not None:
@@ -63,13 +79,15 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """
+        Return size
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """
+        Sets size
+        """
         self.width = value
-#        if type(value) is not int:
-#            raise TypeError("size must be an integer")
-#        if value <= 0:
-#            raise ValueError("size must be > 0")
         self.__size = value
