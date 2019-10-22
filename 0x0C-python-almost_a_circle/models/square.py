@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+
+"""
+This is a Base Module for Square Class
+"""
+
 from models.rectangle import Rectangle
-"""Square Module"""
 
 
 class Square(Rectangle):
