@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+
+"""
+This is a Base Module for Base Class
+"""
+
 import json
-"""Base Module"""
+
 
 class Base:
     """
