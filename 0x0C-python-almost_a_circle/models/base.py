@@ -69,7 +69,7 @@ class Base:
         Static method that returns list of JSON string representation
         """
         if json_string is None:
-            return
+            return []
         else:
             return json.loads(json_string)
 
