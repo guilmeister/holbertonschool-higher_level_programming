@@ -28,7 +28,7 @@ class Square(Rectangle):
         if y < 0:
             raise ValueError("y must be >= 0")
         super().__init__(size, size, x, y, id)
-        self.__size = size
+#        self.__size = size
 
     def __str__(self):
         """
