@@ -3,10 +3,15 @@ import json
 
 
 class Base:
-
+    """
+    Class Base
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        Function that initializes
+        """
         if id is not None:
             self.id = id
         else:
@@ -15,6 +20,9 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """
+        Static method that returns JSON string representation
+        """
         if list_dictionaries is None:
             return "[]"
         else:
@@ -22,6 +30,9 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+        Class method that writes JSON string representation to a file
+        """
         new_list = []
         if list_objs is None:
             pass
@@ -33,6 +44,9 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """
+        Class method that returns list of instances
+        """
         new_list = []
         with open("{}.json".format(cls.__name__), "r") as f:
             data = json.load(f)
@@ -42,6 +56,9 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """
+        Static method that returns list of JSON string representation
+        """
         if json_string is None:
             return
         else:
@@ -49,6 +66,9 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """
+        Class method that returns instance with all attributes set
+        """
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(5, 5)
         elif cls.__name__ == "Square":
