@@ -55,7 +55,7 @@ class Rectangle(Base):
         """
         update_list = []
         limit = len(args)
-        if args is not None:
+        if args:
             for arg in args:
                 update_list.append(arg)
             if limit >= 5:
@@ -78,7 +78,7 @@ class Rectangle(Base):
                 self.__width = update_list[1]
             elif limit == 1:
                 self.id = update_list[0]
-        if kwargs is not None:
+        if kwargs:
             for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
