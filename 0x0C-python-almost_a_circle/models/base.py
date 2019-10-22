@@ -58,7 +58,7 @@ class Base:
         new_list = []
         if file_exists:
             with open("{}.json".format(cls.__name__), "r") as f:
-                data = json.load(f)
+                data = cls.from_json_string(f.read())
             for values in data:
                 new_list.append(cls.create(**values))
         return new_list
