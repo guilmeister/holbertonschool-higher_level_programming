@@ -5,6 +5,7 @@ This is a Base Module for Base Class
 """
 
 import json
+from os import path
 
 
 class Base:
@@ -52,11 +53,14 @@ class Base:
         """
         Class method that returns list of instances
         """
+        files = cls.__name__ + '.json'
+        file_exists = path.isfile(files)
         new_list = []
-        with open("{}.json".format(cls.__name__), "r") as f:
-            data = json.load(f)
-        for values in data:
-            new_list.append(cls.create(**values))
+        if file_exists:
+            with open("{}.json".format(cls.__name__), "r") as f:
+                data = json.load(f)
+            for values in data:
+                new_list.append(cls.create(**values))
         return new_list
 
     @staticmethod
