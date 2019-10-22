@@ -81,6 +81,19 @@ class Square(Rectangle):
                 if key == "y":
                     self.y = value
 
+    def display(self):
+        """
+        Print output
+        """
+        for space_hor in range(self.__y):
+            print("")
+        for horizontal in range(self.__height):
+            for space_ver in range(self.__x):
+                print(" ", end="")
+            for vertical in range(self.__width):
+                print("#", end="")
+            print("")
+
     @property
     def size(self):
         """
