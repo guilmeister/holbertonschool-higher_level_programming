@@ -34,11 +34,10 @@ class Square(Rectangle):
         """
         Function that returns string
         """
-        sqr_prt = "[Square] ({}) {}/{} - {}".format(self.id,
-                                                    self.x,
-                                                    self.y,
-                                                    self.height)
-        return sqr_prt
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x,
+                                                 self.y,
+                                                 self.height)
 
     def to_dictionary(self):
         """
