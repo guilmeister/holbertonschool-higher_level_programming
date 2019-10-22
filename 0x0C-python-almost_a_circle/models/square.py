@@ -37,7 +37,7 @@ class Square(Rectangle):
         sqr_prt = "[Square] ({}) {}/{} - {}".format(self.id,
                                                     self.x,
                                                     self.y,
-                                                    self.size)
+                                                    self.height)
         return sqr_prt
 
     def to_dictionary(self):
