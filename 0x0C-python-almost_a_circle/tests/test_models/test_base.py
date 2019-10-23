@@ -5,6 +5,7 @@ from models.base import Base
 class TestBaseClass(unittest.TestCase):
 
     def test_inputs(self):
+        """added test for bases valid input"""
         b1 = Base()
         result = b1.id
         self.assertIs(result, 1)
