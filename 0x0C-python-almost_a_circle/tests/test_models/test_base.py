@@ -6,11 +6,11 @@ Testing outputs for class base
 
 import unittest
 import sys
-import os.path
+import os
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
-
+from io import StringIO
 
 class TestBaseClass(unittest.TestCase):
     """
@@ -226,3 +226,6 @@ class TestBaseClass(unittest.TestCase):
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
         self.assertEqual(r1 is r2 and r1 == r2, False)
+
+if __name__ == '__main__':
+    unittest.main()

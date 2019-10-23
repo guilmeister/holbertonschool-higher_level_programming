@@ -5,7 +5,11 @@ Unittesting for class square
 """
 
 import unittest
+import sys
+from models.base import Base
+from models.rectangle import Rectangle
 from models.square import Square
+from io import StringIO
 
 
 class TestSquareClass(unittest.TestCase):
@@ -63,3 +67,6 @@ class TestSquareClass(unittest.TestCase):
         s7 = Square(3)
         s7.update(size=69, id=4)
         self.assertEqual(str(s7), "[Square] (4) 0/0 - 69")
+
+if __name__ == '__main__':
+    unittest.main()

@@ -257,3 +257,6 @@ class TestRectangleClass(unittest.TestCase):
         b3 = Base(12)
         result = b3.id
         self.assertIs(result, 12)
+
+if __name__ == '__main__':
+    unittest.main()
