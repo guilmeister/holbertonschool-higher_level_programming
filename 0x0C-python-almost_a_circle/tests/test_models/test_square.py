@@ -36,7 +36,7 @@ class TestSquareClass(unittest.TestCase):
     def test5_inputs(self):
         """check string output"""
         s2 = Square(6)
-        self.assertEqual(str(s2), "[Square] (3) 0/0 - 6")
+        self.assertEqual(str(s2), "[Square] (39) 0/0 - 6")
 
     def test6_updates(self):
         """check if updates args"""

@@ -24,17 +24,17 @@ class TestRectangleClass(unittest.TestCase):
     def test2_inputs_correct(self):
         """Missing ID"""
         r2 = Rectangle(1, 2, 3, 4)
-        self.assertEqual(str(r2), "[Rectangle] (1) 3/4 - 1/2")
+        self.assertEqual(str(r2), "[Rectangle] (19) 3/4 - 1/2")
 
     def test3_inputs_correct(self):
         """Missing ID, y"""
         r3 = Rectangle(1, 2, 3)
-        self.assertEqual(str(r3), "[Rectangle] (2) 3/0 - 1/2")
+        self.assertEqual(str(r3), "[Rectangle] (20) 3/0 - 1/2")
 
     def test4_inputs_correct(self):
         """Missing ID, y, x"""
         r4 = Rectangle(1, 2)
-        self.assertEqual(str(r4), "[Rectangle] (3) 0/0 - 1/2")
+        self.assertEqual(str(r4), "[Rectangle] (21) 0/0 - 1/2")
 
     def test5_raiseError(self):
         """Raise error on missing height"""
@@ -47,12 +47,12 @@ class TestRectangleClass(unittest.TestCase):
     def test7_check_id(self):
         """Check ID count"""
         r5 = Rectangle(10, 1)
-        self.assertEqual(r5.id, 4)
+        self.assertEqual(r5.id, 22)
 
     def test8_check_id(self):
         """Check increment ID count"""
         r6 = Rectangle(6, 9)
-        self.assertEqual(r6.id, 5)
+        self.assertEqual(r6.id, 23)
 
     def test9_check_width(self):
         """Check valid width"""
@@ -221,42 +221,30 @@ class TestRectangleClass(unittest.TestCase):
         """Update with extra parameters"""
         r1 = Rectangle(10, 10, 10, 10)
         r1.update()
-        self.assertEqual(str(r1), "[Rectangle] (20) 10/10 - 10/10")
+        self.assertEqual(str(r1), "[Rectangle] (36) 10/10 - 10/10")
 
     def test_kwargs(self):
         """Test kwargs"""
         r1 = Rectangle(10, 10, 10, 10)
         r1.update(x=1, height=2, y=3, width=4)
-        self.assertEqual(str(r1), "[Rectangle] (16) 1/3 - 4/2")
+        self.assertEqual(str(r1), "[Rectangle] (32) 1/3 - 4/2")
 
     def test_kwargs_extra_keys(self):
         """Test kwargs with extra parameters"""
         r1 = Rectangle(10, 10, 10, 10)
         r1.update(x=1, height=2, y=3, width=4, banu=89)
-        self.assertEqual(str(r1), "[Rectangle] (17) 1/3 - 4/2")
+        self.assertEqual(str(r1), "[Rectangle] (33) 1/3 - 4/2")
 
     def test_inputs50(self):
         """test inputs square class"""
         r1 = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(str(r1), "[Rectangle] (5) 3/4 - 1/2")
         r2 = Rectangle(1, 2, 3, 4)
-        self.assertEqual(str(r2), "[Rectangle] (11) 3/4 - 1/2")
+        self.assertEqual(str(r2), "[Rectangle] (29) 3/4 - 1/2")
         r3 = Rectangle(1, 2, 3)
-        self.assertEqual(str(r3), "[Rectangle] (12) 3/0 - 1/2")
+        self.assertEqual(str(r3), "[Rectangle] (30) 3/0 - 1/2")
         r4 = Rectangle(1, 2)
-        self.assertEqual(str(r4), "[Rectangle] (13) 0/0 - 1/2")
-
-    def test_inputs51(self):
-        """test inputs square class"""
-        b1 = Base()
-        result = b1.id
-        self.assertIs(result, 14)
-        b2 = Base()
-        result = b2.id
-        self.assertIs(result, 15)
-        b3 = Base(12)
-        result = b3.id
-        self.assertIs(result, 12)
+        self.assertEqual(str(r4), "[Rectangle] (31) 0/0 - 1/2")
 
 if __name__ == '__main__':
     unittest.main()
