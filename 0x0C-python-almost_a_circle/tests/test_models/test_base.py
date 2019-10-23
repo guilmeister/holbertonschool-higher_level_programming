@@ -12,6 +12,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 from io import StringIO
 
+
 class TestBaseClass(unittest.TestCase):
     """
     Test base class unittesting
