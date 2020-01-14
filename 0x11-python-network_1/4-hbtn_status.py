@@ -3,9 +3,6 @@
 Script that fetches https://intranet.hbtn.io/status
 """
 
-import urllib.request
-import urllib.parse
-import sys
 import requests
 
 
