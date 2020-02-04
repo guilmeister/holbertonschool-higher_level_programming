@@ -1,7 +1,5 @@
 #!/usr/bin/node
-if (process.argv[2] === undefined) {
-  console.log('Missing number of occurrences');
-} else if (isNaN(Number(process.argv[2]))) {
+if (process.argv[2] === undefined || isNaN(Number(process.argv[2]))) {
   console.log('Missing number of occurrences');
 } else {
   let x = 0;
