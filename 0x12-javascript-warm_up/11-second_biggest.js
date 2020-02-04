@@ -5,7 +5,7 @@ function findSecondMax (array) {
   arr.splice(arr.indexOf(max), 1);
   return Math.max.apply(null, arr);
 }
-if (process.argv[2] === undefined || process.argv.length === 3) {
+if (process.argv[2] === undefined || process.argv.length <= 3) {
   console.log('0');
   process.exit();
 }
