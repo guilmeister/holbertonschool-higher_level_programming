@@ -1,6 +1,6 @@
 #!/usr/bin/node
 function findSecondMax (array) {
-  const arr = array.splice(2).sort();
+  const arr = array.splice(2).sort((a, b) => a - b);
   const max = Math.max.apply(null, arr);
   arr.splice(arr.indexOf(max), 1);
   return Math.max.apply(null, arr);
