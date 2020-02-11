@@ -5,7 +5,6 @@ let counter = 0;
 exports.logMe = function (item) {
   const logList = [];
   let x = logList.length;
-  console.log(logList.length);
   logList.push(item);
   for (; x < logList.length; x++) {
     if (logList[x] === item) {
