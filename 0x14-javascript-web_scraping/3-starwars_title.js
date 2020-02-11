@@ -2,7 +2,6 @@
 
 const search = process.argv[2];
 const url = 'http://swapi.co/api/films/' + search;
-console.log(url);
 const request = require('request');
 request.get(url, function (error, response, body) {
   if (error) {
