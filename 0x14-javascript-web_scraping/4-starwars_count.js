@@ -9,10 +9,11 @@ requests(url, function (error, response, body) {
   }
   const results = JSON.parse(body).results;
   let counter = 0;
-  let x = 0;
-  for (; x < results.length; x++) {
-    if (results[x].characters.includes('18')) {
-      counter = counter + 1;
+  for (const lists of results) {
+    for (const characters of lists.characters) {
+      if (characters.includes('1')) {
+        counter = counter + 1;
+      }
     }
   }
   console.log(counter);
