@@ -11,7 +11,7 @@ requests(url, function (error, response, body) {
   let counter = 0;
   let x = 0;
   for (; x < results.length; x++) {
-    if (results[x].characters.includes('/18/')) {
+    if (results[x].characters.includes('18')) {
       counter = counter + 1;
     }
   }
