@@ -9,9 +9,11 @@ requests.get(url, function (error, response, body) {
   }
   const users = JSON.parse(body).reduce((accumulator, currentValue) => {
     if (currentValue.completed) {
-      accumulator[currentValue.userId]++;
-    } else {
-      accumulator[currentValue.userId] = 1;
+      if (accumulator[currentValue.userId]) {
+        accumulator[currentValue.userId]++;
+      } else {
+        accumulator[currentValue.userId] = 1;
+      }
     }
     return accumulator;
   }, {});
